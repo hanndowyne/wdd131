@@ -124,16 +124,6 @@ main {
     background: var(--highlight);
  }
 
-
- .places {
-    max-width: var(--max-width);
-    margin: 2rem auto;
-    padding:  1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
- }
-
  
 
 figure img {
@@ -152,7 +142,7 @@ figcaption {
     background-color: white;
     padding: var(--spacing-md);
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    
 }
 .weather-icon {
     width: 50px;
