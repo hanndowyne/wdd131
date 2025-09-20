@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citadelle Laferriere - Haiti's Majestic Fortress</title>
+    <meta name="description" content="Country page showing weather and attractions.">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 id="site-title">Citadelle Laferriere</h1>
+        <p>Haiti's Majestic Mountain Fortress</p>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Place</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <picture>
+                <source srcset="images/place2.webp" media="(min-width: 1024px)">
+                <source srcset="images/place2.webp" media="(min-width: 768px)">
+                <img src="images/place2.webp" alt="Citadelle Laferriere in Haiti">
+       
+             </picture>
+        </section>
+
+         <section class="data">
+            <h2>Fortress Facts</h2>
+            <div class="data-grid">
+                <div class="data-item">
+                    <span class="data-label">Location:</span>
+                    <span>Northern Haiti</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Elevation:</span>
+                    <span>910 meters</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Built:</span>
+                    <span>1805-1820</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Architect:</span>
+                    <span>Henri Christophe</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Status:</span>
+                    <span>UNESCO World Heritage</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather">
+             <div class="weather-header">
+                <img class="weather-icon" src="images/weather.svg" alt="Weather Icon">
+                <h2>Weather</h2>
+            </div>
+            <div class="data-grid">
+                <div class="data-item">
+                    <span class="data-label">Temperature:</span>
+                    <span><span id="temperature">75</span>°F</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Wind Speed:</span>
+                    <span><span id="wind-speed">10</span> mph</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Conditions:</span>
+                    <span>Partly Cloudy</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Wind Chill:</span>
+                    <span id="wind-chill">N/A</span>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> My Country Page | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
