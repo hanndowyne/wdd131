@@ -1,0 +1,85 @@
+:root {
+  --primary: #4b004b; 
+  --secondary: #d8cdd6;
+  --background: #f5f5dc; 
+  --accent: #ff69b4; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  padding: 20px;
+}
+
+form {
+  background-color: var(--secondary);
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+label, legend {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+input[type="text"], 
+input[type="date"], 
+select, 
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+fieldset {
+  border: none;
+  margin: 10px 0;
+}
+
+input[type="radio"], 
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-size: 1.2rem;
+  border: 2px solid #333;
+  padding: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+footer {
+  font-size: 0.9rem;
+  padding: 10px;
+}

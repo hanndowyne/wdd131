@@ -157,7 +157,7 @@ figcaption {
 }
 
 @media (min-width: 768px) {
-        main {
+    main {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
         padding: 0 var(--spacing-lg);
