@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', 'Open Sans', sans-serif; 
   background-color: var(--background);
   margin: 0;
   padding: 0;
@@ -29,6 +29,7 @@ form {
   margin: auto;
   padding: 20px;
   border-radius: 8px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 label, legend {
@@ -74,9 +75,9 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: var(--accent);
-  color: white;
-  border-color: var(--accent);
+  background-color: var(--background);
+  color: #4a148c;
+  border-color: #4a148c;
 }
 
 footer {
