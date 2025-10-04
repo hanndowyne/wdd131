@@ -1,46 +1,75 @@
 
 :root {
-    --primary-color: #146cef;
-    --dark-bg: #111;
-    --highlight: #6040aa;
-    --light: #fff;
-    --gray: #f5f5f5;
+    --primary-color: #3b5998;      
+    --highlight: #c5a25e;         
+    --background: #e8ecf1;        
+    --card-bg: #ffffff;            
+    --text-dark: #1c1c1c;         
+    --text-light: #f8f8f8;         
+    --hover-dark: #2c3e75;         
     --max-width: 1200px;
+
 }
 
 html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
 }
 
 main {
-  flex: 1;
+    flex: 1;
 }
 
+
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--gray);
-    color: #333;
+    font-family: 'Montserrat', 'Open Sans', sans-serif; 
+    background-color: var(--light);
+    color: var(--text-dark);
     margin: 0;
     padding: 0;
 }
 
 header {
     background-color: var(--primary-color);
-    color: var(--light);
-    padding: 1rem;
-    text-align: center;
+    color: var(--text-light);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+   
 }
 
 header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
+    font-family: 'Montserrat', 'Open Sans', sans-serif; 
+    font-size: 1.8rem;
     font-weight: 700;
-    margin: 0.5rem 0;
-    text-transform: uppercase;
+    margin: 0;
     letter-spacing: 1px;
+}
+
+header nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: var(--highlight);
+    color: #fff;
 }
 
 nav button {
@@ -76,7 +105,7 @@ main {
 }
 
 .temple-card {
-    background-color: var(--light);
+    background-color: var(--card-bg);
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -86,16 +115,9 @@ main {
     transition: transform 0.3s ease;
 }
 
-#temple-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem;
-    align-items: stretch;
-}
-
 .temple-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+   
 }
 
 .temple-card img {
@@ -106,12 +128,20 @@ main {
     display: block;
 }
 
+#temple-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    align-items: stretch;
+}
+
 .temple-info {
     padding: 1rem;
 }
 
 .temple-info h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', 'Open Sans', sans-serif; 
     font-size: 1.3rem;
     font-weight: 700;
     margin: 0.5rem 0;
@@ -126,9 +156,59 @@ main {
 
 footer {
     background: var(--primary-color);
-    color: var(--light);
+    color: var(--text-light);
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1rem 0;
+    margin-top: auto;
     font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+  
+    header h1 {
+    font-size: 1.6rem;
+  }
+
+    nav {
+    
+        flex-direction: column;
+        align-items: center;
+        padding: 0.8rem 0;
+    
+    }
+
+    main {
+        margin: 1rem auto;
+        padding: 0 0.5rem;
+  }
+
+    .temple-card img {
+        height: 200px;
+    }
+
+    .temple-info h2 {
+        font-size: 1.1rem;
+    }
+
+    
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    button[type="submit"] {
+    width: 100%;
+  }
+
 }
