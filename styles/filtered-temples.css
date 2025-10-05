@@ -51,10 +51,12 @@ header h1 {
     letter-spacing: 1px;
 }
 
+
 header nav {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
 header nav a {
@@ -165,50 +167,55 @@ footer {
 }
 
 
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
+@media (max-width: 720px) {
 
-    header nav {
-        justify-content: center;
-        margin-top: 0.5rem;
-    }
-  
-    header h1 {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    width: 100%; /* ✅ ensures header covers full width */
+  }
+
+  header h1 {
     font-size: 1.6rem;
+    margin-bottom: 0.5rem;
   }
 
-    nav {
-    
-        flex-direction: column;
-        align-items: center;
-        padding: 0.8rem 0;
-    
-    }
-
-    main {
-        margin: 1rem auto;
-        padding: 0 0.5rem;
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    width: 100%; /* ✅ makes nav fill header width */
   }
 
-    .temple-card img {
-        height: 200px;
-    }
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 
-    .temple-info h2 {
-        font-size: 1.1rem;
-    }
+  nav a:hover {
+    background-color: #3b6cc2;
+  }
 
-    
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
+  main {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
 
-    button[type="submit"] {
+  .temple-card img {
+    height: auto;
+  }
+
+  footer {
+    text-align: center;
     width: 100%;
   }
 
+  #temple-cards {
+    grid-template-columns: 1fr;
+  }
 }
