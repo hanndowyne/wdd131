@@ -9,6 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  document.querySelector('.menu-toggle').addEventListener('click', () => {
+  document.querySelector('.nav-links').classList.toggle('show');
+});
+
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
   const yearSpan = document.getElementById("year");
   if (yearSpan) {
     yearSpan.textContent = new Date().getFullYear();
